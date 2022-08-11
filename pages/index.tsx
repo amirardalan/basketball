@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from 'next/Link'
 
 const Home: NextPage = () => {
   return (
@@ -21,33 +22,35 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Players &rarr;</h2>
-            <p>Players</p>
-          </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Teams &rarr;</h2>
-            <p>Teams</p>
-          </a>
+          <Link href="/">
+            <a className={styles.card}>
+              <h2>Players &rarr;</h2>
+              <p>Players</p>
+            </a>
+          </Link>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Stats &rarr;</h2>
-            <p>Stats</p>
-          </a>
+          <Link href="/">
+            <a className={styles.card}>
+              <h2>Teams &rarr;</h2>
+              <p>Teams</p>
+            </a>
+          </Link>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>About &rarr;</h2>
-            <p>
-              About
-            </p>
-          </a>
+          <Link href="/">
+            <a className={styles.card}>
+              <h2>Stats &rarr;</h2>
+              <p>Stats</p>
+            </a>
+          </Link>
+
+          <Link href="/">
+            <a className={styles.card}>
+              <h2>About &rarr;</h2>
+              <p>About</p>
+            </a>
+          </Link>
+          
         </div>
       </main>
 
