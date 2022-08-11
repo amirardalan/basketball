@@ -5,4 +5,5 @@ A Next.js Basketball API experiment by [@amirardalan](https://github.com/amirard
 ### Primarily Built with:
 
 [Next.js](https://github.com/vercel/next.js/)  
+[RapidAPI](https://rapidapi.com/api-sports/api/api-basketball/)
 
