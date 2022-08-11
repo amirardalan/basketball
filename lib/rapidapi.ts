@@ -7,7 +7,7 @@ export const getNbaData = async () => {
     }
   }
   
-  fetch('https://api-basketball.p.rapidapi.com/teams?search=NBA&season=2019-2020&league=12&name=NBA', options)
+  fetch('https://api-basketball.p.rapidapi.com/teams?season=2019-2020&league=12', options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err))
