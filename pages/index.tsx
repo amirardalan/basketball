@@ -13,7 +13,6 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Home({ home }) {
 
   const styleMain = css({
-    background: 'lightgray',
     padding: '2rem',
   })
 
@@ -33,28 +32,24 @@ export default function Home({ home }) {
           <Link href="/">
             <a>
               <h2>Players &rarr;</h2>
-              <p>Players</p>
             </a>
           </Link>
 
           <Link href="/">
             <a>
               <h2>Teams &rarr;</h2>
-              <p>Teams</p>
             </a>
           </Link>
 
           <Link href="/">
             <a>
               <h2>Stats &rarr;</h2>
-              <p>Stats</p>
             </a>
           </Link>
 
           <Link href="/">
             <a>
               <h2>About &rarr;</h2>
-              <p>About</p>
             </a>
           </Link>
 

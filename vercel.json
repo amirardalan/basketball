@@ -1,0 +1,44 @@
+{
+  "github": {
+    "enabled": true,
+    "silent": true
+  },
+  "headers": [
+    {
+      "source": "/fonts/heebo-v21-latin-900.woff2",
+      "headers" : [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/heebo-v21-latin-700.woff2",
+      "headers" : [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/heebo-v21-latin-300.woff2",
+      "headers" : [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/heebo-v21-latin-regular.woff2",
+      "headers" : [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

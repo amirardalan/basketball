@@ -1,10 +1,6 @@
 import { Global } from '@emotion/react'
 
-// TODO Select and Imeplement Typefaces
-//
-// const fontPrimary = '"JetBrains Mono", Menlo, Monaco, "Courier New", monospace'
-// const fontSecondary = '"Assistant", Helvetica, Arial, sans-serif'
-// const fontTertiary = '"PT Serif", "Times New Roman", Times, serif'
+const fontPrimary = '"Heebo", Helvetica, Arial, sans-serif'
 
 const light = '#e4e9f8'
 const lightAccent = '#d8dff0'
@@ -29,65 +25,45 @@ export function GlobalStyles () {
 
   return (
     <>
-      {/* <Global styles={{
+      <Global styles={{
         '@font-face': {
-          fontFamily: 'Assistant',
+          fontFamily: 'Heebo',
           fontStyle: 'normal',
-          fontWeight: 800,
+          fontWeight: 900,
           fontDisplay: 'swap',
-          src: 'url("/fonts/assistant-v15-latin-800.woff2") format("woff2")'
+          src: 'url("/fonts/heebo-v21-latin-900.woff2") format("woff2")'
         },
       }}/>
       <Global styles={{
         '@font-face': {
-          fontFamily: 'Assistant',
-          fontStyle: 'normal',
-          fontWeight: 700,
-          fontDisplay: 'swap',
-          src: 'url("/fonts/assistant-v15-latin-700.woff2") format("woff2")'
-        },
-      }}/>
-      <Global styles={{
-        '@font-face': {
-          fontFamily: 'JetBrains Mono',
-          fontStyle: 'normal',
-          fontWeight: 400,
-          fontDisplay: 'swap',
-          src: 'url("/fonts/jetbrains-mono-v11-latin-regular.woff2") format("woff2")'
-        },
-      }}/>
-      <Global styles={{
-        '@font-face': {
-          fontFamily: 'PT Serif',
-          fontStyle: 'normal',
-          fontWeight: 400,
-          fontDisplay: 'swap',
-          src: 'url("/fonts/pt-serif-v16-latin-regular.woff2") format("woff2")',
-        },
-      }}/>
-      <Global styles={{
-        '@font-face': {
-          fontFamily: 'PT Serif',
+          fontFamily: 'Heebo',
           fontStyle: 'normal',
           fontWeight: 700,
           fontDisplay: 'swap',
-          src: 'url("/fonts/pt-serif-v16-latin-700.woff2") format("woff2")'
+          src: 'url("/fonts/heebo-v21-latin-700.woff2") format("woff2")'
         },
       }}/>
       <Global styles={{
         '@font-face': {
-          fontFamily: 'PT Serif',
-          fontStyle: 'italic',
+          fontFamily: 'Heebo',
+          fontStyle: 'normal',
+          fontWeight: 300,
+          fontDisplay: 'swap',
+          src: 'url("/fonts/heebo-v21-latin-700.woff2") format("woff2")'
+        },
+      }}/>
+      <Global styles={{
+        '@font-face': {
+          fontFamily: 'Heebo',
+          fontStyle: 'normal',
           fontWeight: 400,
           fontDisplay: 'swap',
-          src: 'url("/fonts/pt-serif-v16-latin-italic.woff2") format("woff2")'
+          src: 'url("/fonts/heebo-v21-latin-700.woff2") format("woff2")'
         },
-      }}/> */}
+      }}/>
       <Global styles={{
         'body, body[data-theme="light"], body[data-theme="dark"]': {
-          // '--font-primary': fontPrimary,
-          // '--font-secondary': fontSecondary,
-          // '--font-tertiary': fontTertiary,
+          '--font-primary': fontPrimary,
           '--color-light': lightAccent,
           '--color-dark': darkAccent,
           '--color-gray-dark': grayDark,
@@ -226,7 +202,6 @@ export function GlobalStyles () {
         },
         'h1, h2, h3': {
           color: 'var(--color-heading)',
-          fontFamily: 'var(--font-secondary)',
           fontWeight: 700
         },
         a: {
@@ -250,7 +225,7 @@ export function GlobalStyles () {
           padding: 0,
         },
         'button, input, textarea': {
-          fontFamily: 'var(--font-primary)'
+          // fontFamily: 'var(--font-primary)'
         },
         button: {
           background: 'transparent',
@@ -271,7 +246,6 @@ export function GlobalStyles () {
           position: 'relative',
           '.pageHeading': {
             marginBottom: '1rem',
-            fontFamily: 'var(font-secondary)',
             fontSize: 40,
             WebkitMarqueeIncrement: '0vw',
             fontWeight: 800,
