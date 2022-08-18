@@ -13,19 +13,35 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Home({ home }) {
 
   const styleMain = css({
-    padding: '2rem',
+    h1: {
+      fontSize: 60,
+      fontWeight: 900,
+      lineHeight: '95%',
+    },
+    p: {
+      fontWeight: 300,
+    }
+  })
+
+  const homeTop = css({
+    marginBottom: '2rem',
   })
 
   return (
     <Container title={home.meta.title}>
       <main css={styleMain} className="home">
-        <h1>
-          API-BASKETBALL
-        </h1>
 
-        <p>
-          Basketball API stats and user interface experiment.
-        </p>
+        <div css={homeTop}>
+
+          <h1>
+            API-BASKETBALL
+          </h1>
+
+          <p>
+            Basketball API stats and user interface experiment.
+          </p>
+
+        </div>
 
         <div>
 
