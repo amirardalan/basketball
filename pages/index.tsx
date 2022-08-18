@@ -3,14 +3,17 @@ import Container from '@/components/Container'
 import { homeContent } from '@/data/content'
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
+import { getNbaTeams } from '@/lib/rapidapi'
 
 export const getStaticProps: GetStaticProps = async () => {
+  const teams = await getNbaTeams()
+
   try {
-    return { props: { home: homeContent } }
-  } catch { return { props: { home: homeContent } } }
+    return { props: { home: homeContent, teams: teams.response } }
+  } catch { return { props: { home: homeContent, teams: [] } } }
 }
 
-export default function Home({ home }) {
+export default function Home({ home, teams }) {
 
   const styleMain = css({
     h1: {
@@ -40,6 +43,8 @@ export default function Home({ home }) {
   const homeTop = css({
     marginBottom: '2rem',
   })
+
+  console.log(teams)
 
   return (
     <Container title={home.meta.title}>
