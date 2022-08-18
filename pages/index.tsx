@@ -3,6 +3,7 @@ import Container from '@/components/Container'
 import { homeContent } from '@/data/content'
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
+import { redirect } from 'next/dist/server/api-utils'
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
@@ -20,6 +21,16 @@ export default function Home({ home }) {
     },
     p: {
       fontWeight: 300,
+    }
+  })
+
+  const styleLinks = css({
+    maxWidth: 320,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    'h2:after': {
+      content: '" →"',
     }
   })
 
@@ -43,29 +54,29 @@ export default function Home({ home }) {
 
         </div>
 
-        <div>
+        <div css={styleLinks}>
 
           <Link href="/">
             <a>
-              <h2>Players &rarr;</h2>
+              <h2>Players</h2>
             </a>
           </Link>
 
           <Link href="/">
             <a>
-              <h2>Teams &rarr;</h2>
+              <h2>Teams</h2>
             </a>
           </Link>
 
           <Link href="/">
             <a>
-              <h2>Stats &rarr;</h2>
+              <h2>Stats</h2>
             </a>
           </Link>
 
           <Link href="/">
             <a>
-              <h2>About &rarr;</h2>
+              <h2>About</h2>
             </a>
           </Link>
 
