@@ -1,6 +1,14 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { getNbaData } from '@/lib/rapidapi'
 
+export default async function handler(_: NextApiRequest, res: NextApiResponse) {
+  const response = await getNbaData()
+
+  console.log(response)
+
+  return res.status(200).json
+}
+
 
 // export default async function handler(_: NextApiRequest, res: NextApiResponse) {
 //   const response = await getNbaData()

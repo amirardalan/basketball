@@ -2,6 +2,9 @@
 
 A Next.js Basketball API experiment by [@amirardalan](https://github.com/amirardalan)
 
+###  Run locally
+`yarn dev`
+
 ### Primarily Built with:
 
 [Next.js](https://github.com/vercel/next.js/)  
