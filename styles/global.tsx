@@ -56,9 +56,9 @@ export function GlobalStyles () {
         '@font-face': {
           fontFamily: 'Heebo',
           fontStyle: 'normal',
-          fontWeight: 400,
+          fontWeight: 'regular',
           fontDisplay: 'swap',
-          src: 'url("/fonts/heebo-v21-latin-400.woff2") format("woff2")'
+          src: 'url("/fonts/heebo-v21-latin-regular.woff2") format("woff2")'
         },
       }}/>
       <Global styles={{
