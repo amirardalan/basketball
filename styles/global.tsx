@@ -49,7 +49,7 @@ export function GlobalStyles () {
           fontStyle: 'normal',
           fontWeight: 300,
           fontDisplay: 'swap',
-          src: 'url("/fonts/heebo-v21-latin-700.woff2") format("woff2")'
+          src: 'url("/fonts/heebo-v21-latin-300.woff2") format("woff2")'
         },
       }}/>
       <Global styles={{
@@ -58,7 +58,7 @@ export function GlobalStyles () {
           fontStyle: 'normal',
           fontWeight: 400,
           fontDisplay: 'swap',
-          src: 'url("/fonts/heebo-v21-latin-700.woff2") format("woff2")'
+          src: 'url("/fonts/heebo-v21-latin-400.woff2") format("woff2")'
         },
       }}/>
       <Global styles={{
