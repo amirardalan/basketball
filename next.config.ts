@@ -3,7 +3,7 @@ module.exports = {
   swcMinify: false,
   images: {
     domains: [
-      // 'res.cloudinary.com', // Cloudinary
+      'media.api-sports.io', // Rapid API
     ]
   },
 }

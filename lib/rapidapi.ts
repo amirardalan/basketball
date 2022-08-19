@@ -12,13 +12,15 @@ const options = {
 export const getNbaTeams = async () => {
     const res = await fetch(TEAMS_ENDPOINT, options)
     const items = await res.json()
-    
+
     const data = items.response.map(({ id, logo, name }) => ({
       ["slug"]: generateSlug(name),
       ["id"]: id,
       ["logo"]: logo,
       ["name"]: name
     }))
+
+    console.log(data)
     return data
 }
 
