@@ -1,6 +1,6 @@
-// import { generateSlug } from '@/utils/generateSlug'
+import { generateSlug } from '@/utils/generateSlug'
 
-const RAPID_API_ENDPOINT = `https://api-basketball.p.rapidapi.com/teams?season=2021-2022&league=12`
+const TEAMS_ENDPOINT = `https://api-basketball.p.rapidapi.com/teams?season=2021-2022&league=12`
 const options = {
   method: 'GET',
   headers: {
@@ -10,28 +10,18 @@ const options = {
 }
 
 export const getNbaTeams = async () => {
-
-    const res = await fetch(RAPID_API_ENDPOINT, options)
-    // const items = await res.json()
-
-    // const data = items.assets.map(({ id, image_url, animation_url, name, description, permalink, collection, num_sales }) => ({
-    //   ["slug"]: generateSlug(name),
-    //   ["id"]: id,
-    //   ["image_url"]: image_url,
-    //   ["animation_url"]: animation_url,
-    //   ["name"]: name,
-    //   ["description"]: description,
-    //   ["permalink"]: permalink,
-    //   ["collection"]: collection.name,
-    //   ["created_date"]: collection.created_date,
-    //   ["num_sales"]: num_sales
-    // }))
+    const res = await fetch(TEAMS_ENDPOINT, options)
+    const items = await res.json()
     
-    const data = res.json()
-
+    const data = items.response.map(({ id, logo, name }) => ({
+      ["slug"]: generateSlug(name),
+      ["id"]: id,
+      ["logo"]: logo,
+      ["name"]: name
+    }))
     return data
 }
 
 export const getApiRoute = async () => {
-  return fetch(RAPID_API_ENDPOINT, options)
+  return fetch(TEAMS_ENDPOINT, options)
 }

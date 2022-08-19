@@ -9,7 +9,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const teams = await getNbaTeams()
 
   try {
-    return { props: { home: homeContent, teams: teams.response } }
+    return { props: { home: homeContent, teams: JSON.parse(JSON.stringify(teams.response)) } }
   } catch { return { props: { home: homeContent, teams: [] } } }
 }
 
@@ -43,8 +43,6 @@ export default function Home({ home, teams }) {
   const homeTop = css({
     marginBottom: '2rem',
   })
-
-  console.log(teams)
 
   return (
     <Container title={home.meta.title}>

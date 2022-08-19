@@ -1,4 +1,4 @@
-// import { themeLight, themeDark } from "@/styles/theme"
+export const title = 'Basketball API'
 
 export const logo = {
   title: 'Basketball API',
