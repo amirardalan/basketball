@@ -64,19 +64,19 @@ export default function Home({ home, teams }) {
 
           <Link href="/">
             <a>
-              <h2>Players</h2>
+              <h2>Scores</h2>
+            </a>
+          </Link>
+
+          <Link href="/">
+            <a>
+              <h2>Standings</h2>
             </a>
           </Link>
 
           <Link href="/">
             <a>
               <h2>Teams</h2>
-            </a>
-          </Link>
-
-          <Link href="/">
-            <a>
-              <h2>Stats</h2>
             </a>
           </Link>
 
